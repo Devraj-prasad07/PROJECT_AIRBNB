@@ -1,0 +1,83 @@
+body {
+  font-family: "Plus Jakarta Sans", sans-serif !important;
+}
+
+/* NavBar */
+.navbar {
+  height: 6rem;
+  background-color: #fff;
+}
+
+.nav-link {
+  color: #222222 !important;
+}
+
+/* Footer */
+.f-info-links a {
+  text-decoration: none;
+}
+
+.f-info-links a:hover {
+  text-decoration: underline;
+}
+
+.f-info {
+  height: 8rem;
+  background-color: #ebebeb;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: space-evenly;
+}
+
+.f-info-links,
+.f-social-links {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.f-social-links > a,
+.f-info-links > a {
+  margin-right: 1rem;
+}
+
+.f-social-links > a > i {
+  font-size: 1.5rem;
+  color: black;
+  margin-top: 1rem;
+}
+
+/* Cards */
+.card {
+    border: none !important;
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .card:hover {
+    transform: scale(1.03);
+  }
+  
+  .card-img-top {
+    margin-top: 2rem;
+    border-radius: 2rem !important;
+    object-fit: cover !important;
+  }
+  
+  .card-body {
+    padding: 0 !important;
+  }
+  
+  .card-text {
+    font-weight: 800;
+  }
+  
+  .price {
+    margin-top: 0.5rem;
+  }
+  
+  .listing-link {
+    text-decoration: none; 
+    color: inherit; 
+  }
+  

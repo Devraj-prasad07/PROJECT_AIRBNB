@@ -1,0 +1,28 @@
+<% layout("/layouts/boilerPlate") %>
+
+  <body>
+    <form action="/listing" method="post">
+      <input type="text" name="listing[title]" placeholder="Enter title" />
+      <br />
+      <br />
+      <textarea
+        name="listing[description]"
+        placeholder="Enter description"
+      ></textarea>
+      <br />
+      <br />
+      <input type="text" name="listing[image]" placeholder="Enter image URL/LINK" />
+      <br />
+      <br />
+      <input type="number" name="listing[price]" placeholder="Enter price" />
+      <br />
+      <br />
+      <input type="text" name="listing[location]" placeholder="Enter location" />
+      <br />
+      <br />
+      <input type="text" name="listing[country]" placeholder="Enter country" />
+      <br>
+      <br>
+      <button>Add</button>
+    </form>
+  </body>

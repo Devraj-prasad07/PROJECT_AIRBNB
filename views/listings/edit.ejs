@@ -1,0 +1,41 @@
+<% layout("/layouts/boilerPlate") %>
+<body>
+  <form action="/listing/<%= listing._id %>?_method=PUT" method="post">
+    <input type="text" name="listing[title]" value="<%= listing.title %>" />
+
+    <br />
+    <br />
+
+    <textarea name="listing[description]" cols="30" rows="5">
+<%= listing.description %></textarea
+    >
+
+    <br />
+    <br />
+
+    <input type="text" name="listing[image]" value="<%= listing.image %>" />
+
+    <br />
+    <br />
+
+    <input type="number" name="listing[price]" value="<%= listing.price %>" />
+    <br />
+    <br />
+
+    <input
+      type="text"
+      name="listing[location]"
+      value="<%= listing.location %>"
+    />
+
+    <br />
+    <br />
+
+    <input type="text" name="listing[country]" value="<%= listing.title %>" />
+
+    <br />
+    <br />
+
+    <button>Edit listing</button>
+  </form>
+</body>
