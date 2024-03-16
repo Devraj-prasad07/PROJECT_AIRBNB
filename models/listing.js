@@ -11,17 +11,10 @@ const listingSchema = new Schema({
     required: true,
   },
   image: {
-    type: {
-      filename: {
-        type: String,
-        required: true,
-      },
-      url: {
-        type: String,
-        required: true,
-      },
+    url: {
+      type: String,
+      required: true,
     },
-    required: true,
   },
   price: {
     type: Number,
@@ -39,3 +32,4 @@ const listingSchema = new Schema({
 
 const Listing = mongoose.model("Listing", listingSchema);
 module.exports = Listing;
+

@@ -1,10 +1,17 @@
 body {
   font-family: "Plus Jakarta Sans", sans-serif !important;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.container{
+  flex: 1;
 }
 
 /* NavBar */
 .navbar {
-  height: 6rem;
+  height: 5rem;
   background-color: #fff;
 }
 
@@ -13,6 +20,13 @@ body {
 }
 
 /* Footer */
+footer {
+  margin-top: 3rem;
+  width: 100%;
+  height: 8rem;
+  background-color: #ebebeb;
+}
+
 .f-info-links a {
   text-decoration: none;
 }
@@ -22,12 +36,11 @@ body {
 }
 
 .f-info {
-  height: 8rem;
-  background-color: #ebebeb;
+  height: 100%;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  align-items: space-evenly;
+  align-items: center;
 }
 
 .f-info-links,
@@ -50,34 +63,60 @@ body {
 
 /* Cards */
 .card {
-    border: none !important;
-    transition: transform 0.3s ease-in-out;
-  }
-  
-  .card:hover {
-    transform: scale(1.03);
-  }
-  
-  .card-img-top {
-    margin-top: 2rem;
-    border-radius: 2rem !important;
-    object-fit: cover !important;
-  }
-  
-  .card-body {
-    padding: 0 !important;
-  }
-  
-  .card-text {
-    font-weight: 800;
-  }
-  
-  .price {
-    margin-top: 0.5rem;
-  }
-  
-  .listing-link {
-    text-decoration: none; 
-    color: inherit; 
-  }
-  
+  border: none !important;
+  transition: transform 0.3s ease-in-out;
+}
+
+.card:hover {
+  transform: scale(1.03);
+}
+
+.card-img-top {
+  margin-top: 2rem;
+  border-radius: 2rem !important;
+  object-fit: cover !important;
+}
+
+.card-body {
+  padding: 0 !important;
+}
+
+.card-text {
+  font-weight: 800 !important;
+}
+
+.price {
+  margin-top: -1rem !important ;
+}
+
+.listing-link {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Add Button */
+
+.add-btn {
+  margin-top: 5px;
+  background-color: #fe424d !important;
+  color: #fff !important;
+}
+
+.add-btn:hover {
+  background-color: #fd5e69 !important;
+}
+
+.form {
+  margin-bottom: 10px;
+}
+
+/* Edit Button */
+.edit-btn {
+  margin-top: 5px;
+  background-color: #fe424d !important;
+  color: #fff !important;
+}
+
+.edit-btn:hover {
+  background-color: #fd5e69 !important;
+}
