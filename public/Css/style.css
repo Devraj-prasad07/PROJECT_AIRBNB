@@ -29,6 +29,7 @@ footer {
 
 .f-info-links a {
   text-decoration: none;
+  color: black;
 }
 
 .f-info-links a:hover {
@@ -62,12 +63,16 @@ footer {
 }
 
 /* Cards */
-.card {
+.card{
+border: none !important;
+}
+
+.card-hover {
   border: none !important;
   transition: transform 0.3s ease-in-out;
 }
 
-.card:hover {
+.card-hover:hover {
   transform: scale(1.03);
 }
 
@@ -82,7 +87,7 @@ footer {
 }
 
 .card-text {
-  font-weight: 800 !important;
+  font-weight: 500 !important;
 }
 
 .price {
@@ -97,7 +102,7 @@ footer {
 /* Add Button */
 
 .add-btn {
-  margin-top: 5px;
+  margin-top: 10px;
   background-color: #fe424d !important;
   color: #fff !important;
 }
@@ -120,3 +125,24 @@ footer {
 .edit-btn:hover {
   background-color: #fd5e69 !important;
 }
+
+/*  */
+
+.btns {
+  display: flex;
+  /* justify-content: center; */
+}
+
+/* .edit-listing-btn {
+  background-color: #fe424d !important;
+  color: #fff !important;
+  margin: 1rem 2rem 0 0; 
+}
+
+.edit-listing-btn:hover {
+  background-color: #fd5e69 !important;
+}
+
+.delete-listing-btn {
+  margin: 1rem 17rem 0 0;
+}  */
