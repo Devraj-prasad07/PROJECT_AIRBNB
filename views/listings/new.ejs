@@ -1,9 +1,8 @@
 <% layout("/layouts/boilerPlate") %>
-
 <body>
   <div class="row">
     <div class="col-8 offset-2">
-      <form action="/listing" method="post">
+      <form action="/listing" method="post" novalidate class="needs-validation">
         <br />
         <div>
           <label for="title" class="form-label">Title : </label>
@@ -12,7 +11,11 @@
             name="listing[title]"
             placeholder="Enter title"
             class="form-control form"
+            required
           />
+          <div class="valid-feedback">
+            Title Looks good!
+          </div>
         </div>
 
         <div>
@@ -21,8 +24,11 @@
             name="listing[description]"
             placeholder="Enter description"
             class="form-control form"
-          >
-          </textarea>
+            required
+          ></textarea>
+          <div class="invalid-feedback">
+            Please Give a description.
+          </div>
         </div>
 
         <div>
@@ -39,11 +45,14 @@
           <div class="mb-3 col-md-4">
             <label for="price" class="form-label">Price : </label>
             <input
-              type="number"
               name="listing[price]"
               placeholder="Enter price"
               class="form-control form"
+              required
             />
+            <div class="invalid-feedback">
+              Price Should be in Number.
+            </div>
           </div>
 
           <div class="mb-3 col-md-8">
@@ -53,7 +62,11 @@
               name="listing[location]"
               placeholder="Enter location"
               class="form-control form"
+              required
             />
+            <div class="invalid-feedback">
+              Please Give Valid Location.
+            </div>
           </div>
         </div>
 
@@ -64,7 +77,11 @@
             name="listing[country]"
             placeholder="Enter country"
             class="form-control form"
+            required
           />
+          <div class="invalid-feedback">
+             Invalid Country Name.
+          </div>
         </div>
         <button class="btn add-btn">Add</button>
       </form>
