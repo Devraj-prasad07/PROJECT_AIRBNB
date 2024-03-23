@@ -9,6 +9,7 @@ const Listing = require("./models/listing");
 const ejsMate = require("ejs-mate");
 const wrapAsync = require("./utils/wrapAsync");
 const ExpressError = require("./utils/ExpressError");
+const { listingSchema } = require("./schema.js");
 
 // Function to connect to the database
 async function main() {
@@ -50,10 +51,9 @@ app.get("/listing/new", (req, res) => {
 app.post(
   "/listing",
   wrapAsync(async (req, res, next) => {
-    if (!req.body.listing) {
-      throw new ExpressError(404, "Send valid data for listing");
-    }
-    const newListing = new Listing(req.body.listing);
+    let result = listingSchema.validate(req.body);
+    console.log(result);
+    const newListing = new listing(req.body.listing);
     await newListing.save();
     res.redirect("/listing");
   })
@@ -110,7 +110,7 @@ app.all("*", (req, res, next) => {
 // Error handling middleware
 app.use((err, req, res, next) => {
   let { statusCode = 500, message = "Something Went Wrong !!" } = err;
-  res.status(statusCode).render("./Error/error.ejs",{message});
+  res.status(statusCode).render("./Error/error.ejs", { message });
 });
 
 // Start the server
